@@ -13,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import kotlinx.serialization.Serializable
+import m78exercices.composeapp.generated.resources.Res
 import org.jetbrains.compose.resources.painterResource
 
 class QuestionViewModel : ViewModel() {
@@ -47,8 +48,28 @@ data class Question(
 )
 
 fun getQuestions(): List<Question> = listOf(
-    Question("What is Kotlin?", listOf("A language", "A framework", "An OS", "A database"), 0),
-    Question("What is Jetpack Compose?", listOf("A UI toolkit", "A database", "A network library", "A compiler"), 0)
+    Question("Question1", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 0),
+    Question("Question2", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question3", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 2),
+    Question("Question4", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question5", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 0),
+    Question("Question6", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question7", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 2),
+    Question("Question8", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 3),
+    Question("Question9", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question10", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 2),
+    Question("Question11", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question12", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 3),
+    Question("Question13", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 2),
+    Question("Question14", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question15", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 0),
+    Question("Question16", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 3),
+    Question("Question17", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question18", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 2),
+    Question("Question19", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 1),
+    Question("Question20", listOf("Answer1", "Answer2", "Answer3", "Answer4"), 3),
+
+
 )
 
 @Composable
@@ -58,6 +79,13 @@ fun MenuScreen(navigateToSettingsScreen: () -> Unit, navigateToGameScreen: () ->
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+/*
+        Image(
+            painter = painterResource(Res.drawable.TriviaLogo),
+            modifier = Modifier.size(150.dp),
+            contentDescription = null
+        )
+*/
         Button(onClick = navigateToGameScreen) { Text("New Game") }
         Button(onClick = navigateToSettingsScreen) { Text("Settings") }
     }

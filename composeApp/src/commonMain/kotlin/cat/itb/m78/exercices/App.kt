@@ -120,6 +120,9 @@ fun GameScreen(viewModel: QuestionViewModel, navigateToResultScreen: () -> Unit)
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text("Round ${state.round} of ${viewModel.rounds}")
+
+        Spacer(Modifier.height(20.dp))
+
         Text(text = question.question)
         // Botons per seleccionar resposta
         question.options.forEachIndexed { index, option ->
